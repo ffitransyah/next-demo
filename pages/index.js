@@ -14,7 +14,6 @@ export default function Home() {
 
       <main className={styles.main}>
         <Image src="/images/logo.png" width={200} height={200} alt="Hacktiv8" />
-        <img src="/images/logo.png" alt="Hacktiv8" style={{ height: '200px' }} />
         <h1 className={styles.title}>
           Mari kita belajar <a href="https://nextjs.org">Next.js!</a>
         </h1>
