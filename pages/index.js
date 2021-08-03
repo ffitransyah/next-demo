@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -12,13 +13,23 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <Image src="/images/logo.png" width={200} height={200} alt="Hacktiv8" />
+        <img src="/images/logo.png" alt="Hacktiv8" style={{ height: '200px' }} />
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Mari kita belajar <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
+          <br /><br />
+          <Link href='/about'>
+            <a>About</a>
+          </Link>
+          {' '}|{' '}
+          <Link href='/posts/first-post'>
+            <a>First Post</a>
+          </Link>
         </p>
 
         <div className={styles.grid}>
@@ -64,6 +75,12 @@ export default function Home() {
           </span>
         </a>
       </footer>
+
+      <style jsx>{`
+        p {
+          color: red;
+        }
+      `}</style>
     </div>
   )
 }
